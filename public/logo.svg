@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="5 -11 282.27 127">
+  <defs>
+    <style>
+      .light-blue {
+        font-family: 'Century Gothic', 'Segoe UI', Arial, sans-serif;
+        font-weight: 300;
+        fill: #5cb3e4;
+      }
+      .dark-blue {
+        font-family: 'Century Gothic', 'Segoe UI', Arial, sans-serif;
+        font-weight: 400;
+        fill: #0066b3;
+      }
+      .muted-blue {
+        font-family: 'Century Gothic', 'Segoe UI', Arial, sans-serif;
+        font-weight: 400;
+        fill: #9ab3cd;
+      }
+    </style>
+  </defs>
+
+  <g transform="translate(5, 52)">
+    <text x="0" y="0" font-size="58" letter-spacing="-1.5"><tspan class="light-blue">Broad</tspan><tspan class="dark-blue">Vision</tspan></text>
+    
+    <text x="134" y="50" font-size="54" letter-spacing="-1.5" class="muted-blue">Group</text>
+  </g>
+</svg>
