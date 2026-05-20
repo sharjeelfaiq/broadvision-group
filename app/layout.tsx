@@ -2,7 +2,14 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import { StructuredData } from "./components/StructuredData";
 import "./globals.css";
+import { absoluteUrl, siteConfig } from "./lib/site";
+import {
+  organizationJsonLd,
+  pageSeo,
+  websiteJsonLd,
+} from "./lib/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,13 +22,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://broadvision.com"),
+  metadataBase: new URL(siteConfig.url),
+  applicationName: siteConfig.name,
   title: {
-    default: "BroadVision Group",
-    template: "%s | BroadVision Group",
+    default: pageSeo.home.title,
+    template: `%s | ${siteConfig.name}`,
   },
-  description:
-    "Institutional-grade private asset management for breakthrough technology ventures.",
+  description: pageSeo.home.description,
+  alternates: {
+    canonical: absoluteUrl("/"),
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
@@ -34,29 +44,28 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "BroadVision Group",
-    description:
-      "Institutional-grade private asset management for breakthrough technology ventures.",
-    siteName: "BroadVision Group",
+    title: pageSeo.home.title,
+    description: pageSeo.home.description,
+    url: absoluteUrl("/"),
+    siteName: siteConfig.name,
     images: [
       {
-        url: "/android-chrome-512x512.png",
+        url: absoluteUrl("/android-chrome-512x512.png"),
         width: 512,
         height: 512,
-        alt: "BroadVision Group icon",
+        alt: "BroadVision Group brand mark",
       },
     ],
     type: "website",
   },
   twitter: {
-    card: "summary",
-    title: "BroadVision Group",
-    description:
-      "Institutional-grade private asset management for breakthrough technology ventures.",
+    card: "summary_large_image",
+    title: pageSeo.home.title,
+    description: pageSeo.home.description,
     images: [
       {
-        url: "/android-chrome-512x512.png",
-        alt: "BroadVision Group icon",
+        url: absoluteUrl("/android-chrome-512x512.png"),
+        alt: "BroadVision Group brand mark",
       },
     ],
   },
@@ -72,10 +81,14 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full">
-        <Header />
-        <main className="page-shell min-h-screen pt-20">{children}</main>
-        <Footer />
+      <body className="site-root min-h-full">
+        <StructuredData data={[organizationJsonLd, websiteJsonLd]} />
+        <div className="site-background" aria-hidden="true" />
+        <div className="app-shell min-h-screen">
+          <Header />
+          <main className="page-shell min-h-screen pt-20">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

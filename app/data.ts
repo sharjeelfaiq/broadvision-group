@@ -7,9 +7,6 @@ export const navItems = [
   { label: "Contact", href: "/contact" },
 ];
 
-export const heroNetworkImage =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuAMwB2NNG2oZFujpbisBeQDmzYbCNu5w66d5ZQQHUc_xae-a6fO8sI4TBKh1xCsgc4ILJMmO_MulFLkqEZNwhJx-KpGhjfMUuvDdEae-7zug_y7LYR8GwfDC_KPh86fX85EKdO0B1icPMyT7TBDFOhwsyT7cWQS7SbpDdV6_RAYLp-1WMSAnXycN11R9Yqlhn_x-90J9vT-khKwdBRFkOssOoATXoeqZiAZOl92hbnZRmhOlLSoKKnRgQGZi8hD40YUocq39fgp7Nc";
-
 export const founderImage = "/Dr.%20Pehong%20Chen.webp";
 
 const sectorImages = {

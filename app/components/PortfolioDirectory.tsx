@@ -1,7 +1,3 @@
-"use client";
-
-import { useMemo } from "react";
-import { useSearchParams } from "next/navigation";
 import {
   getPortfolioCategoryBySlug,
   getPortfolioProjectsByCategory,
@@ -9,19 +5,19 @@ import {
 import { PortfolioCategoryFilter } from "./PortfolioCategoryFilter";
 import { PortfolioGrid } from "./PortfolioGrid";
 
-export function PortfolioDirectory() {
-  const searchParams = useSearchParams();
-  const categoryParam = searchParams.get("category");
+type PortfolioDirectoryProps = {
+  category?: string | string[];
+};
+
+export function PortfolioDirectory({ category }: PortfolioDirectoryProps) {
+  const categoryParam = Array.isArray(category) ? category[0] : category ?? null;
   const activeCategory = getPortfolioCategoryBySlug(categoryParam);
-  const projects = useMemo(
-    () => getPortfolioProjectsByCategory(activeCategory.slug),
-    [activeCategory.slug],
-  );
+  const projects = getPortfolioProjectsByCategory(activeCategory.slug);
 
   return (
     <>
       <PortfolioCategoryFilter activeSlug={activeCategory.slug} />
-      <div className="mt-8 text-center text-sm font-semibold text-[#c0c7d6]">
+      <div className="text-muted mt-8 text-center text-sm font-semibold">
         Showing {projects.length}{" "}
         {projects.length === 1 ? "project" : "projects"}
         {activeCategory.slug === "all" ? "" : ` in ${activeCategory.name}`}

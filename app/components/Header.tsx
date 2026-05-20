@@ -26,7 +26,7 @@ export function Header() {
           aria-controls="primary-navigation"
           aria-expanded={open}
           aria-label="Toggle navigation"
-          className="glass-card inline-flex h-11 w-11 items-center justify-center rounded-full text-white transition hover:border-[#2792ff]/60 hover:text-[#a5c8ff] md:hidden"
+          className="glass-card text-heading hover:text-accent-soft inline-flex h-11 w-11 items-center justify-center rounded-full transition hover:border-[var(--border-accent)] md:hidden"
           onClick={() => setOpen((value) => !value)}
           type="button"
         >
@@ -63,13 +63,13 @@ export function Header() {
                 className={[
                   "label-caps rounded-full transition duration-300",
                   active
-                    ? "text-[#2792ff]"
-                    : "text-[#e2e8f0] hover:text-[#a5c8ff]",
+                    ? "text-accent"
+                    : "text-body hover:text-accent-soft",
                   isContact
-                    ? "border border-[#2792ff]/70 px-5 py-2 hover:bg-[#2792ff] hover:text-white"
+                    ? "border border-[var(--border-accent)] px-5 py-2 hover:bg-[var(--primary)] hover:text-heading"
                     : "border-b-2 border-transparent pb-1",
-                  active && !isContact ? "border-[#2792ff]" : "",
-                  active && isContact ? "bg-[#2792ff] text-white" : "",
+                  active && !isContact ? "border-[var(--primary)]" : "",
+                  active && isContact ? "bg-[var(--primary)] text-heading" : "",
                 ].join(" ")}
               >
                 {item.label}
@@ -95,10 +95,10 @@ export function Header() {
                 href={item.href}
                 onClick={() => setOpen(false)}
                 className={[
-                  "rounded-[0.9rem] px-4 py-3 text-sm font-extrabold text-white transition",
+                  "rounded-[0.9rem] px-4 py-3 text-sm font-extrabold transition",
                   active
-                    ? "bg-[#2792ff] shadow-[0_12px_28px_rgba(39,146,255,0.25)]"
-                    : "text-[#e2e8f0] hover:bg-white/[0.07] hover:text-[#a5c8ff]",
+                    ? "bg-[var(--primary)] text-heading shadow-[0_12px_28px_rgba(39,146,255,0.25)]"
+                    : "text-body hover:bg-white/[0.07] hover:text-accent-soft",
                 ].join(" ")}
               >
                 {item.label}

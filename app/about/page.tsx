@@ -3,11 +3,15 @@ import Image from "next/image";
 import { Button } from "../components/Button";
 import { CTASection } from "../components/CTASection";
 import { StatsBlock } from "../components/StatsBlock";
+import { StructuredData } from "../components/StructuredData";
 import { founderImage } from "../data";
+import {
+  breadcrumbJsonLd,
+  createPageMetadata,
+  drPehongChenJsonLd,
+} from "../lib/seo";
 
-export const metadata: Metadata = {
-  title: "About",
-};
+export const metadata: Metadata = createPageMetadata("about");
 
 const aboutStats = [
   { value: "2006", label: "Founded" },
@@ -19,12 +23,21 @@ const aboutStats = [
 export default function AboutPage() {
   return (
     <>
-      <section className="ambient-section relative overflow-hidden py-20 sm:py-24 md:py-36">
+      <StructuredData
+        data={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+          ]),
+          drPehongChenJsonLd,
+        ]}
+      />
+      <section className="relative overflow-hidden py-20 sm:py-24 md:py-36">
         <div className="site-container">
-          <p className="label-caps mb-6 text-[#a5c8ff]">
+          <p className="label-caps text-accent-soft mb-6">
             The Institution of Innovation
           </p>
-          <h1 className="max-w-3xl text-4xl font-black leading-tight text-white sm:text-5xl md:text-7xl">
+          <h1 className="heading-tight text-heading max-w-3xl text-4xl sm:text-5xl md:text-7xl">
             Institutional-Grade Private Asset Management.
           </h1>
         </div>
@@ -39,15 +52,15 @@ export default function AboutPage() {
       <section className="section-y">
         <div className="site-container grid gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
-            <blockquote className="max-w-lg text-3xl font-black italic leading-tight text-[#a5c8ff] sm:text-4xl md:text-5xl">
+            <blockquote className="heading-tight text-accent-soft max-w-lg text-3xl italic sm:text-4xl md:text-5xl">
               &quot;Creating and nurturing unique solutions through digital
               transformation.&quot;
             </blockquote>
-            <div className="mt-10 h-1 w-24 rounded-full bg-[#2792ff]" />
+            <div className="mt-10 h-1 w-24 rounded-full bg-[var(--primary)]" />
           </div>
-          <div className="space-y-6 text-base leading-7 text-white md:space-y-8 md:text-lg md:leading-8">
+          <div className="body-copy space-y-6 text-base md:space-y-8 md:text-lg md:leading-8">
             <p>
-              <strong className="font-black text-[#a5c8ff]">
+              <strong className="text-accent-soft font-black">
                 BroadVision Group (BVG)
               </strong>{" "}
               is a US-based private asset management firm focusing on funding,
@@ -63,10 +76,10 @@ export default function AboutPage() {
               lives for the people they serve and, in doing so, generate robust
               returns for our investors.
             </p>
-            <p className="glass-card rounded-[1.25rem] p-5 text-base leading-7 text-[#e2e8f0] md:rounded-[1.5rem] md:p-6">
+            <p className="glass-card body-copy rounded-[1.25rem] p-5 text-base md:rounded-[1.5rem] md:p-6">
               Since BVG&apos;s formation in 2006, we have made direct investments
               in more than{" "}
-              <strong className="font-black text-white">
+              <strong className="text-heading font-black">
                 50 startup ventures
               </strong>
               , plus many more indirectly as a limited partner via a number of
@@ -78,7 +91,7 @@ export default function AboutPage() {
 
       <section className="section-y pt-0">
         <div className="site-container">
-          <h2 className="mb-8 text-3xl font-black text-white sm:text-4xl md:mb-12 md:text-5xl">
+          <h2 className="heading-tight text-heading mb-8 text-3xl sm:text-4xl md:mb-12 md:text-5xl">
             Our Founder
           </h2>
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-10">
@@ -91,33 +104,33 @@ export default function AboutPage() {
                 src={founderImage}
               />
             </div>
-            <div>
-              <h3 className="text-3xl font-black text-white md:text-4xl">
+            <div id="dr-pehong-chen">
+              <h3 className="heading-tight text-heading text-3xl md:text-4xl">
                 Dr. Pehong Chen
               </h3>
-              <p className="label-caps mt-2 text-[#00c8fe]">
+              <p className="label-caps text-secondary mt-2">
                 Founder & Chairman
               </p>
               <div className="glass-card-strong mt-6 rounded-[1.25rem] p-5 md:mt-8 md:rounded-[1.5rem] md:p-8">
-                <div className="space-y-5 border-b border-white/20 pb-6 text-base leading-7 text-white md:space-y-6 md:pb-8">
+                <div className="body-copy space-y-5 border-b border-white/20 pb-6 text-base md:space-y-6 md:pb-8">
                   <p>
                     BVG Founder & Chairman{" "}
-                    <strong className="font-black text-[#a5c8ff]">
+                    <strong className="text-accent-soft font-black">
                       Dr. Pehong Chen
                     </strong>{" "}
                     was formerly CEO of BroadVision, Inc. (
-                    <strong className="font-black text-[#a5c8ff]">
+                    <strong className="text-accent-soft font-black">
                       Nasdaq: BVSN
                     </strong>
                     ), a highly recognized pioneer in e-commerce, content
                     management, and enterprise digital hub platform solutions,
                     which he founded in 1993 and took public in 1996, reaching a{" "}
-                    <strong className="font-black text-[#a5c8ff]">
+                    <strong className="text-accent-soft font-black">
                       $26B market cap
                     </strong>{" "}
                     in 2000.
                   </p>
-                  <p className="text-[#e2e8f0]">
+                  <p>
                     For more than 25 years, BVSN empowered thousands of
                     organizations worldwide to successfully transform and
                     profitably operate their businesses digitally through
@@ -128,18 +141,18 @@ export default function AboutPage() {
                 </div>
                 <div className="grid gap-6 pt-6 sm:grid-cols-2 md:gap-8 md:pt-8">
                   <div>
-                    <div className="text-4xl font-black text-[#a5c8ff] md:text-5xl">
+                    <div className="text-accent-soft text-4xl font-black md:text-5xl">
                       $26B
                     </div>
-                    <div className="label-caps mt-2 text-white">
+                    <div className="label-caps text-heading mt-2">
                       Peak Market Cap
                     </div>
                   </div>
                   <div>
-                    <div className="text-4xl font-black text-[#a5c8ff] md:text-5xl">
+                    <div className="text-accent-soft text-4xl font-black md:text-5xl">
                       1993
                     </div>
-                    <div className="label-caps mt-2 text-white">
+                    <div className="label-caps text-heading mt-2">
                       Year Founded
                     </div>
                   </div>

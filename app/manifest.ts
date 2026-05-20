@@ -1,11 +1,11 @@
 import type { MetadataRoute } from "next";
+import { siteConfig } from "./lib/site";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "BroadVision Group",
-    short_name: "BroadVision",
-    description:
-      "Institutional-grade private asset management for breakthrough technology ventures.",
+    name: siteConfig.name,
+    short_name: siteConfig.shortName,
+    description: siteConfig.description,
     start_url: "/",
     display: "standalone",
     background_color: "#0a0f1e",
