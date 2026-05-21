@@ -25,12 +25,15 @@ export default async function PortfolioPage({
           { name: "Portfolio", path: "/portfolio" },
         ])}
       />
-      <section className="section-y pb-10 text-center md:pb-14">
+      <section className="section-y pb-8 text-center md:pb-10">
         <div className="site-container">
-          <h1 className="page-title text-heading">Portfolio</h1>
+          <p className="label-caps text-accent-soft mb-5">
+            Venture Ecosystem
+          </p>
+          <h1 className="page-title text-heading">Strategic Portfolio</h1>
           <p className="body-copy mx-auto mt-6 max-w-3xl text-base md:mt-8 md:text-lg md:leading-8">
-            Powering the world&apos;s most ambitious technology leaders across
-            artificial intelligence, biotech, and global infrastructure.
+            Diversified investments in high-impact sectors that are redefining
+            the global technological landscape.
           </p>
         </div>
       </section>

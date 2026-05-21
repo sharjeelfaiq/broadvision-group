@@ -9,10 +9,10 @@ export function PortfolioCategoryFilter({
   activeSlug,
 }: PortfolioCategoryFilterProps) {
   return (
-    <nav aria-label="Portfolio categories" className="mt-10">
+    <nav aria-label="Portfolio categories" className="mt-8">
       <div className="site-container">
-        <div className="glass-card mx-auto max-w-6xl rounded-[1.75rem] p-2 shadow-[0_22px_80px_rgba(0,0,0,0.18)]">
-          <div className="text-subtle flex items-center gap-3 px-3 py-2 text-xs font-bold uppercase tracking-[0.14em] md:px-4">
+        <div className="glass-card mx-auto max-w-6xl rounded-[1.5rem] p-2 shadow-[0_22px_80px_rgba(0,0,0,0.18)] md:rounded-[1.75rem]">
+          <div className="text-subtle flex items-center gap-3 px-3 py-2 text-[0.66rem] font-bold uppercase tracking-[0.14em] md:px-4">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--secondary)] shadow-[0_0_18px_var(--secondary-glow)]" />
             Filter by sector
           </div>
@@ -26,10 +26,10 @@ export function PortfolioCategoryFilter({
                   <Link
                     aria-current={active ? "page" : undefined}
                     className={[
-                      "relative inline-flex min-h-10 shrink-0 snap-start items-center justify-center whitespace-nowrap rounded-full px-4 text-sm font-bold leading-5 transition duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-[var(--primary-focus-ring)] md:min-h-11 md:px-5",
+                      "label-caps relative inline-flex min-h-10 shrink-0 snap-start items-center justify-center whitespace-nowrap rounded-full border px-4 text-[0.68rem] leading-5 transition duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-[var(--primary-focus-ring)] md:min-h-11 md:px-5",
                       active
-                        ? "bg-[var(--primary)] text-heading shadow-[0_10px_28px_rgba(39,146,255,0.26),inset_0_1px_0_rgba(255,255,255,0.16)]"
-                        : "text-body hover:bg-white/[0.07] hover:text-heading",
+                        ? "border-[var(--border-accent)] bg-[var(--primary)] text-heading shadow-[0_10px_28px_rgba(39,146,255,0.26),inset_0_1px_0_rgba(255,255,255,0.16)]"
+                        : "border-white/10 bg-white/[0.035] text-body hover:border-[var(--border-strong)] hover:bg-white/[0.07] hover:text-heading",
                     ].join(" ")}
                     href={
                       category.slug === "all"

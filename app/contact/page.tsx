@@ -10,17 +10,17 @@ const features = [
   {
     icon: "G",
     title: "Global Presence",
-    text: "Operating across 14 international hubs",
+    text: "Investments across technology sectors worldwide",
   },
   {
     icon: "S",
     title: "Institutional Trust",
-    text: "Secured capital management protocols",
+    text: "Operating since 2006 with a disciplined investment approach",
   },
   {
-    icon: "24",
-    title: "Rapid Response",
-    text: "Initial consultation within 24 hours",
+    icon: "@",
+    title: "Direct Contact",
+    text: siteConfig.email,
   },
 ];
 
@@ -73,9 +73,9 @@ export default function ContactPage() {
                 </span>
               </a>
               <div className="rounded-[1.25rem] border border-white/10 bg-white/[0.04] p-5">
-                <span className="label-caps text-secondary">Response</span>
+                <span className="label-caps text-secondary">Direct Contact</span>
                 <span className="text-heading mt-2 block text-base font-bold">
-                  Initial consultation within 24 hours
+                  {siteConfig.email}
                 </span>
               </div>
             </div>

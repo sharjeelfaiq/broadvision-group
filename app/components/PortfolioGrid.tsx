@@ -18,7 +18,7 @@ export function PortfolioGrid({ projects }: PortfolioGridProps) {
   }
 
   return (
-    <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3 xl:gap-6">
+    <div className="grid min-w-0 grid-cols-[repeat(auto-fill,minmax(min(100%,240px),1fr))] gap-4">
       {projects.map((project) => (
         <PortfolioCard
           key={`${project.categorySlug}-${project.name}`}

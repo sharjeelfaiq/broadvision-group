@@ -3,6 +3,7 @@ export type PortfolioProject = {
   description: string;
   url: string;
   status: string;
+  logo?: string;
 };
 
 export type PortfolioCategory = {
@@ -14,6 +15,7 @@ export type PortfolioCategory = {
 export type PortfolioProjectEntry = PortfolioProject & {
   category: string;
   categorySlug: string;
+  monogram: string;
 };
 
 export const allPortfolioCategory = {
@@ -616,6 +618,7 @@ export const portfolioProjects = portfolioCategories.flatMap((category) =>
     ...project,
     category: category.name,
     categorySlug: category.slug,
+    monogram: project.name.replace(/^[^a-zA-Z0-9]+/, "").charAt(0).toUpperCase(),
   })),
 );
 

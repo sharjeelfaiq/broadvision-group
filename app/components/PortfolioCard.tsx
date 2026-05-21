@@ -1,37 +1,67 @@
+import Image from "next/image";
 import type { PortfolioProjectEntry } from "@/src/data/portfolio";
 
 type PortfolioCardProps = {
   project: PortfolioProjectEntry;
 };
 
-export function PortfolioCard({ project }: PortfolioCardProps) {
-  return (
-    <article className="glass-card group flex min-h-[19rem] flex-col rounded-[1.25rem] p-5 transition duration-300 hover:-translate-y-1 hover:border-[var(--border-accent)] sm:min-h-[21rem] md:rounded-[1.5rem] md:p-6">
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="label-caps text-secondary rounded-full bg-[var(--primary-chip)] px-3 py-1 text-[0.58rem]">
-          {project.status}
-        </span>
-        <span className="label-caps text-accent-soft rounded-full bg-white/[0.06] px-3 py-1 text-[0.58rem]">
-          {project.category}
-        </span>
-      </div>
+function compactCategory(category: string) {
+  return category
+    .replace(" / Big Data / Digital Engagement", "")
+    .replace(" / Digital Health", "");
+}
 
-      <div className="mt-6 flex flex-1 flex-col md:mt-8">
-        <h3 className="heading-tight text-heading text-xl sm:text-2xl">
-          {project.name}
-        </h3>
-        <p className="text-muted mt-4 flex-1 text-sm leading-6">
-          {project.description}
-        </p>
-        <a
-          className="label-caps ui-link mt-7 inline-flex w-fit items-center gap-3 hover:gap-5 md:mt-8"
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visit Website <span aria-hidden="true">-&gt;</span>
-        </a>
-      </div>
+export function PortfolioCard({ project }: PortfolioCardProps) {
+  const category = compactCategory(project.category);
+
+  return (
+    <article className="group h-full min-w-0">
+      <a
+        className="glass-card flex h-full min-h-[17rem] min-w-0 flex-col overflow-hidden rounded-[1.25rem] p-4 transition duration-300 hover:-translate-y-0.5 hover:border-[var(--border-accent)] hover:shadow-[0_18px_50px_rgba(39,146,255,0.12),inset_0_1px_0_rgba(255,255,255,0.05)] focus:outline-none focus-visible:ring-4 focus-visible:ring-[var(--primary-focus-ring)]"
+        href={project.url}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <div className="flex min-h-28 items-center justify-center rounded-[1rem] border border-white/10 bg-white/[0.045] px-5 py-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+          {project.logo ? (
+            <Image
+              alt={`${project.name} logo`}
+              className="max-h-12 w-auto object-contain"
+              height={48}
+              src={project.logo}
+              width={160}
+            />
+          ) : (
+            <div
+              aria-hidden="true"
+              className="flex h-16 w-16 items-center justify-center rounded-2xl border border-[var(--border-strong)] bg-[var(--primary-glass)] text-3xl font-black text-accent-soft shadow-[0_0_34px_rgba(39,146,255,0.2)]"
+            >
+              {project.monogram}
+            </div>
+          )}
+        </div>
+
+        <div className="mt-5 flex min-w-0 flex-1 flex-col">
+          <div className="flex min-w-0 flex-wrap items-start gap-x-3 gap-y-2">
+            <h3 className="heading-tight text-heading min-w-0 flex-[1_1_10rem] text-lg leading-6">
+              {project.name}
+            </h3>
+            <span className="portfolio-card-badge border-[var(--border-accent)] bg-[var(--primary-glass)] text-secondary">
+              {category}
+            </span>
+          </div>
+
+          <p className="portfolio-card-description text-muted mt-3 text-sm leading-6">
+            {project.description}
+          </p>
+
+          <div className="mt-auto flex min-w-0 flex-wrap gap-2 pt-5">
+            <span className="portfolio-card-badge border-white/10 bg-white/[0.04] text-subtle">
+              {project.status}
+            </span>
+          </div>
+        </div>
+      </a>
     </article>
   );
 }

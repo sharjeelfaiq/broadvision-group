@@ -25,7 +25,7 @@ export function Footer() {
           ))}
         </nav>
         <p className="text-muted text-sm leading-6 opacity-65">
-          © 2024 BroadVision Group. All rights reserved.
+          © 2026 BroadVision Group. All rights reserved.
         </p>
       </div>
     </footer>

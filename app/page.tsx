@@ -12,10 +12,10 @@ import { createPageMetadata } from "./lib/seo";
 export const metadata: Metadata = createPageMetadata("home");
 
 const homeStats = [
-  { value: "12 B+", label: "Capital Deployed" },
-  { value: "450+", label: "Portfolio Companies" },
-  { value: "32+", label: "Global Markets" },
-  { value: "2", label: "Decades Excellence" },
+  { value: "50+", label: "Startup Ventures" },
+  { value: "2006", label: "Founded" },
+  { value: "9", label: "Key Sectors" },
+  { value: "Global", label: "Reach" },
 ];
 
 const heroStats = [
@@ -113,7 +113,7 @@ export default function Home() {
                     </h2>
                   </div>
                   <div className="hidden rounded-full border border-[var(--border-strong)] bg-white/[0.05] px-3 py-2 text-xs font-black text-accent-soft sm:block">
-                    7 Sectors
+                    9 Sectors
                   </div>
                 </div>
 
