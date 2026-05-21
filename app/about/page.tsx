@@ -74,7 +74,7 @@ export default function AboutPage() {
               domains.
             </p>
             <p>
-              At BVG, we strive to create and nurture unique solutions through
+              At BVG, we thrive to create and nurture unique solutions through
               digital transformation, delivering compelling growth and
               profitability for businesses as well as happier work and healthier
               lives for the people they serve and, in doing so, generate robust

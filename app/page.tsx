@@ -12,15 +12,13 @@ import { createPageMetadata } from "./lib/seo";
 export const metadata: Metadata = createPageMetadata("home");
 
 const homeStats = [
-  { value: "50+", label: "Direct Investment Ventures" },
+  { value: "50+", label: "Direct Investments" },
   { value: "2006", label: "Founded" },
-  { value: "9", label: "Key Technology Sectors" },
 ];
 
 const heroStats = [
-  { value: "50+", label: "Startup Ventures" },
+  { value: "50+", label: "Direct Investments" },
   { value: "2006", label: "Founded" },
-  { value: "Global", label: "Technology Focus" },
 ];
 
 const heroSectors = [
