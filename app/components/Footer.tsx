@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { navItems } from "../data";
 import { Logo } from "./Logo";
+import { SocialLinks } from "./SocialLinks";
 
 export function Footer() {
   return (
@@ -27,6 +28,7 @@ export function Footer() {
         <p className="text-muted text-sm leading-6 opacity-65">
           © 2026 BroadVision Group. All rights reserved.
         </p>
+        <SocialLinks />
       </div>
     </footer>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactForm } from "../components/ContactForm";
+import { SocialLinks } from "../components/SocialLinks";
 import { StructuredData } from "../components/StructuredData";
 import { siteConfig } from "../lib/site";
 import { breadcrumbJsonLd, createPageMetadata } from "../lib/seo";
@@ -77,6 +78,10 @@ export default function ContactPage() {
                 <span className="text-heading mt-2 block text-base font-bold">
                   {siteConfig.email}
                 </span>
+                <SocialLinks
+                  className="mt-4 justify-start"
+                  linkClassName="px-2.5"
+                />
               </div>
             </div>
 
