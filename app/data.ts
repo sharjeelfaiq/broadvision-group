@@ -38,28 +38,103 @@ export const sectorCards = portfolioCategories.map((category) => ({
 
 export const teamMembers = [
   {
+    slug: "pehong-chen",
     name: "Dr. Pehong Chen",
     title: "Founder & Chairman",
     image: "/Dr. Pehong Chen.webp",
+    bio: [
+      "Dr. Pehong Chen is Founder & Chairman of BroadVision Group (BVG), a private asset management firm focusing on funding, incubating, and operating cutting-edge business ventures globally across artificial intelligence, cleantech, cloudtech, fintech, healthtech, medtech, biotech, and other innovative technology domains. BVG's mission is to create and nurture unique solutions through digital transformation, delivering compelling growth and profitability for businesses as well as happier work and healthier life for the people they serve.",
+      "Previously, Dr. Chen was CEO of BroadVision, Inc. (Nasdaq: BVSN), a highly recognized pioneer in e-commerce, content management, and enterprise digital hub platform solutions, which he founded in 1993 and took public in 1996, reaching a $26B market cap in 2000. For more than 25 years, BVSN has empowered thousands of enterprises worldwide to successfully transform and profitably operate their businesses digitally through high-output collaboration internally and high-touch engagement externally. BVSN was acquired by private equity firm ESW Capital in May 2020.",
+      "Prior to starting BroadVision, Dr. Chen was Vice President of multimedia technology at Sybase, responsible for the company's digital initiatives. He founded and was President of Gain Technology, a leading supplier of hypermedia software platform and tools, where he spearheaded multimedia as a core technology for a new generation of business applications. Sybase acquired Gain in 1992 for over $150 million.",
+      "A serial entrepreneur, dubbed \"Master of the Universe\" as one of the 25 most influential people in e-business by BusinessWeek, Dr. Chen is an active participant in the Silicon Valley success story. In addition to running and growing his own companies, he has helped a number of startup ventures achieve success with early-stage capital, mentoring, and business connections, including UT Starcom, NetIQ, Siebel Systems, Sina, UpWork, C3.ai, Somnics Health, Lucira Health, among others.",
+      "Currently, Dr. Chen is a board member of Weibo (Nasdaq: WB), China's leading social media platform and microblogging network, and a trustee on the board of Asian Art Museum of San Francisco. He has been a member of the Committee of 100 since 1993 and served as Vice Chairman from 2006 to 2010.",
+      "Dr. Chen received his PhD from University of California at Berkeley, MS from Indiana University, and BS from National Taiwan University, all in computer science. He is also a graduate of Stanford University's executive program in business and management.",
+    ],
+    details: [
+      "Founder of BroadVision, Inc. in 1993",
+      "Took BroadVision, Inc. public in 1996",
+      "Former Vice President of multimedia technology at Sybase",
+      "Founder and former President of Gain Technology",
+    ],
   },
   {
+    slug: "a-r-weiler",
     name: "A.R. Weiler",
     title: "Managing Director, Americas",
     image: "/A.R. Weiler.webp",
+    bio: [
+      "A.R. Weiler is an innovative, outcomes-oriented leader with a passion for building and scaling healthcare businesses, and in the process delivering transformational growth by increasing revenues and bottom-line results.",
+      "Mr. Weiler was CEO of Livio Health Group, an innovative care delivery provider owned by the parent of Blue Cross of Minnesota, a $13 billion health plan. In this role, he led various clinical businesses including a mobile and onsite primary care practice for vulnerable populations, as well as a de novo palliative care service, utilizing a risk-bearing, value-based population health care model.",
+      "From 2012 through 2016, Mr. Weiler was President and CEO of Healthsense, Inc., where under his focused leadership the company developed a technology-enabled passive remote monitoring system that improved care for the frail elderly and chronically ill while delivering cost savings. Healthsense earned several prestigious industry awards for its innovation and excellence in healthcare, and the company was subsequently acquired by GreatCall, Inc. in December 2016.",
+      "Prior to Healthsense, Mr. Weiler held several executive leadership positions in the healthcare industry, including Senior Vice President of Payer Services for Change Healthcare; Senior Vice President of Partnerships for Virgin Pulse; Senior Vice President of Provider Sales and Account Management at OptumInsight; and Vice President of Oracle's North America Healthcare division.",
+      "Mr. Weiler also has significant international business development experience. He served as Senior Vice President of Liberate Japan and Oracle Corporation's Japan subsidiary, where he helped establish foundational strategic partnerships that generated more than $1 billion in annual revenue within the first decade.",
+      "Mr. Weiler earned a degree in Computer Science from Harvard University, and lives with his physician wife and family in Minneapolis, Minnesota.",
+    ],
+    details: [
+      "Former CEO of Livio Health Group",
+      "Former President and CEO of Healthsense, Inc.",
+      "Healthcare executive leadership across Change Healthcare, Virgin Pulse, OptumInsight, and Oracle",
+      "Computer Science degree from Harvard University",
+    ],
   },
   {
+    slug: "andrea-rubei",
     name: "Andrea Rubei",
     title: "Managing Director, EMEA",
     image: "/Andrea Rubei.webp",
+    bio: [
+      "Andrea Rubei, born in Rome, Italy, graduated from LUISS University and began his career in Holland with Hewlett Packard. He then moved to Cisco Systems, where he focused on growing the B2B e-commerce platform, radically transforming the business model with partners from physical to digital.",
+      "Subsequently, Andrea moved to BroadVision, one of the fastest growing Silicon Valley internet software solution providers in the early 2000s, where he held roles of increasing responsibility until becoming COO in 2009.",
+      "In 2011, Rubei joined Microsoft, where he managed the Nokia-Windows Phone division in Western Europe. He subsequently moved to Microsoft Portugal as Chief Operating and Marketing Officer.",
+      "Currently, Andrea Rubei is one of the founders and CEO of myMeta Software, a fast-growing startup that provides a next-generation AI-powered digital adoption platform.",
+    ],
+    details: [
+      "Former BroadVision COO",
+      "Former Microsoft executive in Western Europe and Portugal",
+      "Founder and CEO of myMeta Software",
+      "Graduate of LUISS University",
+    ],
   },
   {
+    slug: "toshi-sakayori",
     name: "Toshi Sakayori",
     title: "Managing Director, Japan",
     image: "/Toshi Sakayori.webp",
+    bio: [
+      "Toshi Sakayori is a professional sales executive with more than 35 years of experience leading international companies like IBM, SAP, Manugistics, and InterSystems. He was the first President & Representative Director of BroadVision Japan KK, established as a wholly owned subsidiary of BroadVision, Inc. in 2000, where he led Japan operations and created strong customer relationships with large Japanese companies.",
+      "Toshi's career includes being past Country Manager of U.S.-based software companies such as InterSystems Japan KK, a company providing database solutions; BroadVision Japan KK; and Manugistics Japan KK, a supply chain management solution provider.",
+      "Before that, Toshi was the past General Manager for SAP Japan western region and sales division in Tokyo. Starting his career at IBM Japan, Toshi spent his first 15 years as an engineer.",
+      "Toshi holds a BS in Mathematics from Yokohama City University.",
+    ],
+    details: [
+      "First President & Representative Director of BroadVision Japan KK",
+      "Former Country Manager for InterSystems Japan KK and Manugistics Japan KK",
+      "Former General Manager for SAP Japan western region and sales division in Tokyo",
+      "BS in Mathematics from Yokohama City University",
+    ],
   },
   {
+    slug: "yun-ping-hsu",
     name: "Yun-Ping Hsu",
     title: "Managing Director, Asia Pacific",
     image: "/Yun-Ping Hsu.webp",
+    bio: [
+      "Yun-Ping Hsu has over 20 years of software product development experience. He was VP of Engineering in SugarCRM and BroadVision, and held leadership positions in Iris/Lotus/IBM and DEC.",
+      "His product experience includes CRM, e-commerce, and groupware. Most recently, he was Technical Director in Big Data and Cloud technology in the III, an NGO for Taiwan's information industry.",
+    ],
+    details: [
+      "Former VP of Engineering at SugarCRM",
+      "Former VP of Engineering at BroadVision",
+      "Leadership roles at Iris/Lotus/IBM and DEC",
+      "Former Technical Director in Big Data and Cloud technology at III",
+    ],
   },
 ];
+
+export type TeamMember = (typeof teamMembers)[number];
+
+export const teamMemberSlugs = teamMembers.map((member) => member.slug);
+
+export function getTeamMemberBySlug(slug: string) {
+  return teamMembers.find((member) => member.slug === slug);
+}

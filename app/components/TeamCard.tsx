@@ -1,14 +1,20 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type TeamCardProps = {
+  slug: string;
   name: string;
   title: string;
   image: string;
 };
 
-export function TeamCard({ name, title, image }: TeamCardProps) {
+export function TeamCard({ slug, name, title, image }: TeamCardProps) {
   return (
-    <article className="glass-card flex min-h-[20rem] flex-col items-center justify-center rounded-[1.5rem] p-6 text-center transition duration-300 hover:-translate-y-1 hover:border-[var(--border-accent)] sm:min-h-[22rem] sm:rounded-[2rem] sm:p-8">
+    <Link
+      aria-label={`Read ${name}'s biography`}
+      className="glass-card flex min-h-[20rem] flex-col items-center justify-center rounded-[1.5rem] p-6 text-center transition duration-300 hover:-translate-y-1 hover:border-[var(--border-accent)] sm:min-h-[22rem] sm:rounded-[2rem] sm:p-8"
+      href={`/team/${slug}`}
+    >
       <div className="relative mb-7 h-32 w-32 rounded-full border-2 border-[var(--primary)] p-2 shadow-[0_0_0_5px_rgba(39,146,255,0.18)] sm:h-40 sm:w-40 lg:h-44 lg:w-44">
         <div className="relative h-full w-full overflow-hidden rounded-full">
           <Image
@@ -26,6 +32,6 @@ export function TeamCard({ name, title, image }: TeamCardProps) {
       <p className="text-secondary mt-4 text-sm font-extrabold uppercase tracking-wide sm:text-base lg:text-lg">
         {title}
       </p>
-    </article>
+    </Link>
   );
 }
